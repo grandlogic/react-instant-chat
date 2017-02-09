@@ -25,6 +25,24 @@ h3 {
   flex-shrink: 0;
 }
 
+.ux-controls input[type="submit"] {
+  padding:5px 8px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+.ux-controls input[type="submit"]:hover {
+  padding:5px 8px; 
+    background:#ddd; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}*/
+
 .chat-input input[type="text"] {
   width: 100%;
   margin-left: -20px;

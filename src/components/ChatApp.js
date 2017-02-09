@@ -7,6 +7,8 @@ import config from '../config';
 import Messages from './Messages';
 import ChatInput from './ChatInput';
 
+//var theSocket={}
+
 class ChatApp extends React.Component {
   socket = {};
   constructor(props) {
@@ -16,6 +18,7 @@ class ChatApp extends React.Component {
     
     // Connect to the server
     this.socket = io(config.api, { query: `username=${props.username}` }).connect();
+    window.theSocket=this.socket;
 
     // Listen for messages from the server
     this.socket.on('server:message', message => {
@@ -31,9 +34,11 @@ class ChatApp extends React.Component {
 
     // Emit the message to the server
     this.socket.emit('client:message', messageObject);
-
-    messageObject.fromMe = true;
-    this.addMessage(messageObject);
+    if(message != 'First-Contact')
+    {
+      messageObject.fromMe = true;
+      this.addMessage(messageObject);
+    }
   }
 
   addMessage(message) {
@@ -46,7 +51,7 @@ class ChatApp extends React.Component {
   render() {
     return (
       <div className="container">
-        <h3>React Chat App</h3>
+        <h3>Pi Assistant</h3>
         <Messages messages={this.state.messages} />
         <ChatInput onSend={this.sendHandler} />
       </div>

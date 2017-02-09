@@ -53,6 +53,7 @@
     "normalize.css": "^4.0.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
+    "react-render-html": "^0.1.6",
     "socket.io-client": "^1.4.8"
   }
 }

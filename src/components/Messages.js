@@ -15,9 +15,12 @@ class Messages extends React.Component {
         return (
           <Message
             key={i}
+            ux={message.ux}
             username={message.username}
             message={message.message}
-            fromMe={message.fromMe} />
+            fromMe={message.fromMe}
+            uxdyno={message.uxdyno}
+            uxstatic={message.uxstatic}/>
         );
       });
 

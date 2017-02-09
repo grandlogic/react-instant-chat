@@ -11,7 +11,8 @@ module.exports = function(config) {
       'test/loadtests.js'
     ],
     port: 8000,
-    captureTimeout: 60000,
+    host: "172.20.10.2",
+    captureTimeout: 10000,
     singleRun: true,
     preprocessors: {
       'test/loadtests.js': [ 'webpack', 'sourcemap' ]
