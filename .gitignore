@@ -1,4 +1,4 @@
-# Logs
+# Logsj
 logs
 *.log
 
@@ -28,3 +28,7 @@ node_modules
 
 # Bower
 bower_components/
+
+.DS_Store
+src/.DS_Store
+.idea
